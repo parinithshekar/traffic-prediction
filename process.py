@@ -20,7 +20,7 @@ WEIGHTS =[0, 5, 8, 0, 3, 2, 7]
 # OPTIMAL PROCESSING TIME - Pillar of the algorithm
 # Hyper-parameter depending on the horizontal distance b/w vehicles and camera,
 # camera's angle and its position (per vehicle class)
-OPT = [1, 3.971544, 4, 4, 4, 4, 4]
+OPT = [1, 3.971544, 3.87, 4, 4, 4, 4]
 
 # Lower and upper limits for the signal's green time
 MIN_TIME = 15
@@ -52,7 +52,7 @@ total_vehicle_count = [0] * NUM_OBJECTS
 vehicles = { 'background':0, 'car':0, 'truck':0, 'person':0, 'bicycle':0, 'motorcycle':0, 'bus':0 }
 
 # Set video source
-capture = cv2.VideoCapture("cctv_crop.mp4")
+capture = cv2.VideoCapture("demo/cctv_crop.mp4")
 # capture.set(cv2.CAP_PROP_FRAME_WIDTH, IMG_WIDTH)
 # capture.set(cv2.CAP_PROP_FRAME_HEIGHT, IMG_HEIGHT)
 
@@ -73,6 +73,8 @@ while(True):
         
         # Resize frame for model
         frame = cv2.resize(frame, (IMG_WIDTH, IMG_HEIGHT))
+        processed_frame = frame
+        
         frame = np.array(frame)
         model_input_frame = np.expand_dims(frame, axis=0)
 
@@ -166,7 +168,7 @@ while(True):
             close_flag = 0
 
         # Print output to terminal
-        print(f'Next Prediction {green_time}')
+        print(f"Next Prediction {green_time}")
         print(f'Start_Flag {open_flag}')
         print(f'End_Flag {close_flag}')
 
