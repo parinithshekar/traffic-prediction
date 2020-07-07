@@ -10,9 +10,9 @@ The SSD300 model used for this project is derived from [pierluigiferrari/ssd_ker
 
 ## Prerequisites
 
-- Tensorflow
-- Keras
-- OpenCV
+- Tensorflow (Last run on v1.12.0)
+- Keras (Last run on v2.2.4)
+- OpenCV (Last run on v4.2.0)
 - numpy
 
 Download the [.h5 model](https://drive.google.com/file/d/1_GlbaKfDloQDQWDhiecFhxsZ1Jl5uYt5/view?usp=sharing) and place it in the root directory
