@@ -32,7 +32,7 @@ python process.py
 This algorithm uses a few hyper-parameters that can be approximated by considering the vehicle and acceleration profiles of different vehicles. The most important parameter is the "Optimal Processing Time" or OPT, which is an estimate of how long a vehicle takes to cross the field of view of the camera that is mounted on the traffic signal. This camera angle is optimal for this algorithm as it gets the best view of the vehicles and detects them with higher accuracy.
 
 <p align="center">
-  <img width="30%" src="demo/cctv_processed.gif">
+  <img width="70%" src="demo/cctv_processed.gif">
 </p>
 
 This approach has its own limitations that are inherent with any image-processing algorithm, but attempts to give a basis to solve the traffic problem by using minimal hardware/ compute resources.
